@@ -1,0 +1,26 @@
+<colorfold_level>
+    <swap>0</swap>
+    <divide>1</divide>
+    <duplicate>1</duplicate>
+    <maximum_moves>4</maximum_moves>
+    <valid_coordinates>
+        <coordinate><x>0</x><y>0</y></coordinate>
+        <coordinate><x>1</x><y>0</y></coordinate>
+        <coordinate><x>2</x><y>0</y></coordinate>
+        <coordinate><x>2</x><y>1</y></coordinate>
+        <coordinate><x>0</x><y>1</y></coordinate>
+        <coordinate><x>1</x><y>1</y></coordinate>
+    </valid_coordinates>
+    <puzzle>
+        <tile>
+            <coordinate><x>1</x><y>1</y></coordinate>
+            <color_id>8</color_id>
+        </tile>
+    </puzzle>
+    <solution>
+        <tile>
+            <coordinate><x>1</x><y>1</y></coordinate>
+            <color_id>7</color_id>
+        </tile>
+    </solution>
+</colorfold_level>

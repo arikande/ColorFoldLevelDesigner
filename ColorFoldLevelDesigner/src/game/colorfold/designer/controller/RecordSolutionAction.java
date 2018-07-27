@@ -1,9 +1,12 @@
 package game.colorfold.designer.controller;
 
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Iterator;
 
 import javax.swing.AbstractAction;
+import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 
 import game.colorfold.designer.model.ColorFoldLevelSolution;
@@ -38,6 +41,25 @@ public class RecordSolutionAction extends AbstractAction {
 		fileContent.append(new ColorFoldMoveXMLConverter().toXML(colorFoldMove));
 	    }
 	    fileContent.append("</colorfold_level_solution>");
+	    String levelFileName = levelDesignerController.getLevelDesignerModel().getSelectedLevel().getFile()
+		    .getName();
+	    int dialogButton = JOptionPane.YES_NO_OPTION;
+	    int dialogResult = JOptionPane.showConfirmDialog(levelDesignerController.getLevelDesignerFrame(),
+		    "Save to file " + levelFileName + "?", "Save", dialogButton);
+	    if (dialogResult == 0) {
+
+		File file = new File(levelDesignerController.getLevelDesignerModel().getSolutionFilesFolder(),
+			levelFileName);
+		try {
+		    FileWriter fileWriter = new FileWriter(file);
+		    fileWriter.write(fileContent.toString());
+		    fileWriter.close();
+		} catch (Exception exception) {
+		    exception.printStackTrace();
+		}
+
+	    }
+
 	    System.out.println(fileContent);
 	}
     }

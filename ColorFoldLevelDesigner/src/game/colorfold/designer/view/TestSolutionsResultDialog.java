@@ -3,8 +3,6 @@ package game.colorfold.designer.view;
 import java.awt.BorderLayout;
 import java.awt.Frame;
 
-import javax.swing.Action;
-import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;

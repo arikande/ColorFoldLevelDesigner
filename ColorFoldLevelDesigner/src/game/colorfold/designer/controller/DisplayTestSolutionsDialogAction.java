@@ -34,14 +34,16 @@ public class DisplayTestSolutionsDialogAction extends AbstractAction {
 	    if (colorFoldLevelSolution != null) {
 
 		if (colorFoldLevel.getMaximumMoves() != colorFoldLevelSolution.getMoveCount()) {
-		    testSolutionsResultDialog.appendTestOutputText(file.getName() + ".....Level and solution move counts are different");
+		    testSolutionsResultDialog
+			    .appendTestOutputText(file.getName() + ".....Level and solution move counts are different");
 		    testSolutionsResultDialog.appendTestOutputText(System.getProperty("line.separator"));
 		} else {
 		    TestLevelSolutionCommand testLevelSolutionCommand = new TestLevelSolutionCommand(colorFoldLevel,
 			    colorFoldLevelSolution);
 		    boolean result = testLevelSolutionCommand.execute();
 		    if (result) {
-			testSolutionsResultDialog.appendTestOutputText(file.getName() + ".....Success");
+			testSolutionsResultDialog.appendTestOutputText(file.getName() + ".....Success in "
+				+ colorFoldLevelSolution.getMoveCount() + " moves.");
 		    } else {
 			testSolutionsResultDialog.appendTestOutputText(file.getName() + ".....Failed");
 		    }
