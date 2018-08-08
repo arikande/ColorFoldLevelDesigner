@@ -15,7 +15,8 @@ import game.colorfold.designer.utility.LevelFileXMLConverter;
 
 public class DisplayOpenLevelFilesFolderDialogAction extends AbstractAction {
 
-    private LevelDesignerController levelDesignerController;
+    private static final String DEFAULT_LEVEL_DIRECTORY = "C:\\Users\\Deniz ARIKAN\\git\\ColorFoldLevelDesigner\\ColorFoldLevelDesigner\\data\\levels";
+	private LevelDesignerController levelDesignerController;
     private JFileChooser openLevelFilesFolderChooser;
 
     public DisplayOpenLevelFilesFolderDialogAction(LevelDesignerController levelDesignerController) {
@@ -52,7 +53,7 @@ public class DisplayOpenLevelFilesFolderDialogAction extends AbstractAction {
 
     private JFileChooser getOpenLevelFilesFolderChooser() {
 	if (openLevelFilesFolderChooser == null) {
-	    openLevelFilesFolderChooser = new JFileChooser();
+	    openLevelFilesFolderChooser = new JFileChooser(DEFAULT_LEVEL_DIRECTORY);
 	    openLevelFilesFolderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 	}
 	return openLevelFilesFolderChooser;

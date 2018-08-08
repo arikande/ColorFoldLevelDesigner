@@ -27,7 +27,7 @@ public class NewLevelDialog extends JDialog {
 		setModal(true);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout());
-		setSize(220, 80);
+		setSize(220, 120);
 		getContentPane().add(getCenterPanel(), BorderLayout.CENTER);
 		getContentPane().add(getPageEndPanel(), BorderLayout.PAGE_END);
 	}
