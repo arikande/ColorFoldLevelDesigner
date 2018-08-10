@@ -3,7 +3,6 @@ package game.colorfold.designer.controller;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.swing.AbstractAction;
@@ -15,8 +14,11 @@ import game.colorfold.designer.utility.LevelFileXMLConverter;
 
 public class DisplayOpenLevelFilesFolderDialogAction extends AbstractAction {
 
+    /*
     private static final String DEFAULT_LEVEL_DIRECTORY = "C:\\Users\\Deniz ARIKAN\\git\\ColorFoldLevelDesigner\\ColorFoldLevelDesigner\\data\\levels";
-	private LevelDesignerController levelDesignerController;
+    */
+    private static final String DEFAULT_LEVEL_DIRECTORY = "/home/arikande/git/ColorFoldLevelDesigner/ColorFoldLevelDesigner/data/levels";
+    private LevelDesignerController levelDesignerController;
     private JFileChooser openLevelFilesFolderChooser;
 
     public DisplayOpenLevelFilesFolderDialogAction(LevelDesignerController levelDesignerController) {
