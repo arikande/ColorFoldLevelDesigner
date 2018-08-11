@@ -12,26 +12,26 @@ import game.colorfold.designer.utility.LevelFileXMLConverter;
 
 public class SaveAllLevelsAction extends AbstractAction {
 
-	private LevelDesignerController levelDesignerController;
+    private LevelDesignerController levelDesignerController;
 
-	public SaveAllLevelsAction(LevelDesignerController levelDesignerController) {
-		super("Save all");
-		this.levelDesignerController = levelDesignerController;
-	}
+    public SaveAllLevelsAction(LevelDesignerController levelDesignerController) {
+	super("Save all");
+	this.levelDesignerController = levelDesignerController;
+    }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		LevelDesignerModel levelDesignerModel = levelDesignerController.getLevelDesignerModel();
-		Iterator<File> levelFilesIterator = levelDesignerModel.getLevelFilesIterator();
-		while (levelFilesIterator.hasNext()) {
-			File file = levelFilesIterator.next();
-			ColorFoldLevel colorFoldLevel = levelDesignerModel.getLevel(file);
-			if (colorFoldLevel.isSaveNeeded()) {
-				new LevelFileXMLConverter().writeToFile(colorFoldLevel);
-				colorFoldLevel.setSaveNeeded(false);
-			}
-		}
-		levelDesignerController.updateLevelDesignerFrameTitle();
+    @Override
+    public void actionPerformed(ActionEvent e) {
+	LevelDesignerModel levelDesignerModel = levelDesignerController.getLevelDesignerModel();
+	Iterator<File> levelFilesIterator = levelDesignerModel.getLevelFilesIterator();
+	while (levelFilesIterator.hasNext()) {
+	    File file = levelFilesIterator.next();
+	    ColorFoldLevel colorFoldLevel = levelDesignerModel.getLevel(file);
+	    if (colorFoldLevel.isSaveNeeded()) {
+		new LevelFileXMLConverter().writeToFile(colorFoldLevel, colorFoldLevel.getFile());
+		colorFoldLevel.setSaveNeeded(false);
+	    }
 	}
+	levelDesignerController.updateLevelDesignerFrameTitle();
+    }
 
 }

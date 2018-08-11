@@ -2,9 +2,13 @@ package game.colorfold.designer.controller;
 
 import java.awt.event.ActionEvent;
 import java.io.File;
+import java.util.Iterator;
 
 import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
+
+import game.colorfold.designer.model.ColorFoldLevel;
+import game.colorfold.designer.utility.LevelFileXMLConverter;
 
 public class ExportLevelFilesAction extends AbstractAction {
 
@@ -22,6 +26,18 @@ public class ExportLevelFilesAction extends AbstractAction {
 	int option = getExportLevelFilesFolderChooser().showOpenDialog(levelDesignerController.getLevelDesignerFrame());
 	if (option == JFileChooser.APPROVE_OPTION) {
 	    File exportLevelFilesFolder = getExportLevelFilesFolderChooser().getSelectedFile();
+	    Iterator<ColorFoldLevel> levelsIterator = levelDesignerController.getLevelDesignerModel()
+		    .getLevelsIterator();
+	    while (levelsIterator.hasNext()) {
+		ColorFoldLevel colorFoldLevel = levelsIterator.next();
+		String fileName = colorFoldLevel.getFile().getName();
+		String exportFileName = exportLevelFilesFolder.getAbsolutePath() + System.getProperty("file.separator")
+			+ fileName;
+		File exportFile = new File(exportFileName);
+		LevelFileXMLConverter levelFileXMLConverter = new LevelFileXMLConverter();
+		levelFileXMLConverter.setAddingSolutionMoves(false);
+		levelFileXMLConverter.writeToFile(colorFoldLevel, exportFile);
+	    }
 
 	}
     }

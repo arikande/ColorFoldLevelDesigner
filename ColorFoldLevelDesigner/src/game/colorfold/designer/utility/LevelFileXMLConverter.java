@@ -19,6 +19,8 @@ import game.colorfold.designer.model.Coordinate;
 
 public class LevelFileXMLConverter {
 
+    private boolean addingSolutionMoves = true;
+
     public String toXML(ColorFoldLevel colorFoldLevel) {
 	StringBuilder xml = new StringBuilder();
 	xml.append("<colorfold_level>");
@@ -115,32 +117,31 @@ public class LevelFileXMLConverter {
 	xml.append("</solution>");
 	xml.append(System.getProperty("line.separator"));
 
-	ColorFoldLevelSolution colorFoldLevelSolution = colorFoldLevel.getColorFoldLevelSolution();
-	if (colorFoldLevelSolution != null) {
-
-	    xml.append(LevelDesignerConstants.TAB);
-	    xml.append("<solution_moves>");
-	    xml.append(System.getProperty("line.separator"));
-
-	    Iterator<ColorFoldMove> movesIterator = colorFoldLevelSolution.getMovesIterator();
-	    while (movesIterator.hasNext()) {
-		ColorFoldMove colorFoldMove = movesIterator.next();
-		ColorFoldMoveXMLConverter colorFoldMoveXMLConverter = new ColorFoldMoveXMLConverter();
-		xml.append(colorFoldMoveXMLConverter.toXML(colorFoldMove));
+	if (addingSolutionMoves) {
+	    ColorFoldLevelSolution colorFoldLevelSolution = colorFoldLevel.getColorFoldLevelSolution();
+	    if (colorFoldLevelSolution != null) {
+		xml.append(LevelDesignerConstants.TAB);
+		xml.append("<solution_moves>");
+		xml.append(System.getProperty("line.separator"));
+		Iterator<ColorFoldMove> movesIterator = colorFoldLevelSolution.getMovesIterator();
+		while (movesIterator.hasNext()) {
+		    ColorFoldMove colorFoldMove = movesIterator.next();
+		    ColorFoldMoveXMLConverter colorFoldMoveXMLConverter = new ColorFoldMoveXMLConverter();
+		    xml.append(colorFoldMoveXMLConverter.toXML(colorFoldMove));
+		}
+		xml.append(LevelDesignerConstants.TAB);
+		xml.append("</solution_moves>");
+		xml.append(System.getProperty("line.separator"));
 	    }
-
-	    xml.append(LevelDesignerConstants.TAB);
-	    xml.append("</solution_moves>");
-	    xml.append(System.getProperty("line.separator"));
 	}
 
 	xml.append("</colorfold_level>");
 	return xml.toString();
     }
 
-    public void writeToFile(ColorFoldLevel colorFoldLevel) {
+    public void writeToFile(ColorFoldLevel colorFoldLevel, File file) {
 	try {
-	    FileWriter fileWriter = new FileWriter(colorFoldLevel.getFile());
+	    FileWriter fileWriter = new FileWriter(file);
 	    fileWriter.write(toXML(colorFoldLevel));
 	    fileWriter.flush();
 	    fileWriter.close();
@@ -218,6 +219,10 @@ public class LevelFileXMLConverter {
 	    e.printStackTrace();
 	}
 	return colorFoldLevel;
+    }
+
+    public void setAddingSolutionMoves(boolean addingSolutionMoves) {
+	this.addingSolutionMoves = addingSolutionMoves;
     }
 
     private String convertCoordinateToString(Coordinate coordinate) {
