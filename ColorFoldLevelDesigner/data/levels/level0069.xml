@@ -5,28 +5,28 @@
     <maximum_moves>4</maximum_moves>
     <valid_coordinates>
         <coordinate><x>0</x><y>0</y></coordinate>
-        <coordinate><x>1</x><y>0</y></coordinate>
         <coordinate><x>2</x><y>0</y></coordinate>
         <coordinate><x>0</x><y>1</y></coordinate>
-        <coordinate><x>1</x><y>1</y></coordinate>
         <coordinate><x>2</x><y>1</y></coordinate>
+        <coordinate><x>1</x><y>1</y></coordinate>
+        <coordinate><x>1</x><y>0</y></coordinate>
     </valid_coordinates>
     <puzzle>
         <tile>
             <coordinate><x>0</x><y>0</y></coordinate>
-            <color_id>2</color_id>
+            <color_id>4</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>2</x><y>0</y></coordinate>
+            <color_id>3</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>0</x><y>1</y></coordinate>
+            <color_id>0</color_id>
         </tile>
         <tile>
             <coordinate><x>1</x><y>0</y></coordinate>
             <color_id>0</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>2</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>0</x><y>1</y></coordinate>
-            <color_id>2</color_id>
         </tile>
         <tile>
             <coordinate><x>1</x><y>1</y></coordinate>
@@ -34,7 +34,7 @@
         </tile>
         <tile>
             <coordinate><x>2</x><y>1</y></coordinate>
-            <color_id>2</color_id>
+            <color_id>0</color_id>
         </tile>
     </puzzle>
     <solution>
@@ -43,10 +43,6 @@
             <color_id>1</color_id>
         </tile>
         <tile>
-            <coordinate><x>1</x><y>0</y></coordinate>
-            <color_id>4</color_id>
-        </tile>
-        <tile>
             <coordinate><x>2</x><y>0</y></coordinate>
             <color_id>1</color_id>
         </tile>
@@ -55,8 +51,12 @@
             <color_id>1</color_id>
         </tile>
         <tile>
+            <coordinate><x>1</x><y>0</y></coordinate>
+            <color_id>2</color_id>
+        </tile>
+        <tile>
             <coordinate><x>1</x><y>1</y></coordinate>
-            <color_id>0</color_id>
+            <color_id>1</color_id>
         </tile>
         <tile>
             <coordinate><x>2</x><y>1</y></coordinate>
@@ -66,10 +66,10 @@
     <solution_moves>
         <move>
             <from>
-                <coordinate><x>0</x><y>1</y></coordinate>
+                <coordinate><x>0</x><y>0</y></coordinate>
             </from>
             <to>
-                <coordinate><x>0</x><y>0</y></coordinate>
+                <coordinate><x>1</x><y>0</y></coordinate>
             </to>
             <type>1</type>
         </move>
@@ -78,7 +78,16 @@
                 <coordinate><x>0</x><y>0</y></coordinate>
             </from>
             <to>
-                <coordinate><x>1</x><y>0</y></coordinate>
+                <coordinate><x>0</x><y>1</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>2</x><y>0</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>2</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
@@ -87,16 +96,7 @@
                 <coordinate><x>2</x><y>1</y></coordinate>
             </from>
             <to>
-                <coordinate><x>2</x><y>0</y></coordinate>
-            </to>
-            <type>1</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>2</x><y>0</y></coordinate>
-            </from>
-            <to>
-                <coordinate><x>1</x><y>0</y></coordinate>
+                <coordinate><x>1</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
