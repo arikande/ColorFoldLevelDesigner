@@ -1,5 +1,5 @@
 <colorfold_level>
-    <swap>1</swap>
+    <swap>0</swap>
     <divide>1</divide>
     <duplicate>0</duplicate>
     <maximum_moves>14</maximum_moves>
@@ -9,15 +9,15 @@
         <coordinate><x>2</x><y>0</y></coordinate>
         <coordinate><x>3</x><y>0</y></coordinate>
         <coordinate><x>4</x><y>0</y></coordinate>
+        <coordinate><x>5</x><y>0</y></coordinate>
+        <coordinate><x>6</x><y>0</y></coordinate>
+        <coordinate><x>6</x><y>1</y></coordinate>
+        <coordinate><x>5</x><y>1</y></coordinate>
         <coordinate><x>4</x><y>1</y></coordinate>
         <coordinate><x>3</x><y>1</y></coordinate>
+        <coordinate><x>2</x><y>1</y></coordinate>
         <coordinate><x>1</x><y>1</y></coordinate>
         <coordinate><x>0</x><y>1</y></coordinate>
-        <coordinate><x>2</x><y>1</y></coordinate>
-        <coordinate><x>5</x><y>1</y></coordinate>
-        <coordinate><x>5</x><y>0</y></coordinate>
-        <coordinate><x>6</x><y>1</y></coordinate>
-        <coordinate><x>6</x><y>0</y></coordinate>
     </valid_coordinates>
     <puzzle>
         <tile>
@@ -26,30 +26,30 @@
         </tile>
         <tile>
             <coordinate><x>1</x><y>0</y></coordinate>
-            <color_id>5</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>2</x><y>0</y></coordinate>
             <color_id>0</color_id>
         </tile>
         <tile>
-            <coordinate><x>3</x><y>0</y></coordinate>
+            <coordinate><x>2</x><y>0</y></coordinate>
             <color_id>5</color_id>
         </tile>
         <tile>
+            <coordinate><x>3</x><y>0</y></coordinate>
+            <color_id>0</color_id>
+        </tile>
+        <tile>
             <coordinate><x>4</x><y>0</y></coordinate>
+            <color_id>5</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>5</x><y>0</y></coordinate>
+            <color_id>0</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>6</x><y>0</y></coordinate>
             <color_id>0</color_id>
         </tile>
         <tile>
             <coordinate><x>0</x><y>1</y></coordinate>
-            <color_id>0</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>5</x><y>0</y></coordinate>
-            <color_id>5</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>6</x><y>0</y></coordinate>
             <color_id>0</color_id>
         </tile>
         <tile>
@@ -62,7 +62,7 @@
         </tile>
         <tile>
             <coordinate><x>3</x><y>1</y></coordinate>
-            <color_id>7</color_id>
+            <color_id>0</color_id>
         </tile>
         <tile>
             <coordinate><x>4</x><y>1</y></coordinate>
@@ -80,68 +80,77 @@
     <solution>
         <tile>
             <coordinate><x>0</x><y>0</y></coordinate>
-            <color_id>2</color_id>
+            <color_id>0</color_id>
         </tile>
         <tile>
             <coordinate><x>1</x><y>0</y></coordinate>
-            <color_id>2</color_id>
+            <color_id>1</color_id>
         </tile>
         <tile>
             <coordinate><x>2</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>3</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>4</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>0</x><y>1</y></coordinate>
-            <color_id>3</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>5</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>6</x><y>0</y></coordinate>
-            <color_id>2</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>1</x><y>1</y></coordinate>
-            <color_id>3</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>2</x><y>1</y></coordinate>
-            <color_id>3</color_id>
-        </tile>
-        <tile>
-            <coordinate><x>3</x><y>1</y></coordinate>
             <color_id>4</color_id>
         </tile>
         <tile>
+            <coordinate><x>3</x><y>0</y></coordinate>
+            <color_id>0</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>4</x><y>0</y></coordinate>
+            <color_id>4</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>5</x><y>0</y></coordinate>
+            <color_id>1</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>6</x><y>0</y></coordinate>
+            <color_id>0</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>0</x><y>1</y></coordinate>
+            <color_id>1</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>1</x><y>1</y></coordinate>
+            <color_id>4</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>2</x><y>1</y></coordinate>
+            <color_id>1</color_id>
+        </tile>
+        <tile>
+            <coordinate><x>3</x><y>1</y></coordinate>
+            <color_id>2</color_id>
+        </tile>
+        <tile>
             <coordinate><x>4</x><y>1</y></coordinate>
-            <color_id>3</color_id>
+            <color_id>1</color_id>
         </tile>
         <tile>
             <coordinate><x>5</x><y>1</y></coordinate>
-            <color_id>3</color_id>
+            <color_id>4</color_id>
         </tile>
         <tile>
             <coordinate><x>6</x><y>1</y></coordinate>
-            <color_id>3</color_id>
+            <color_id>1</color_id>
         </tile>
     </solution>
     <solution_moves>
         <move>
             <from>
-                <coordinate><x>1</x><y>0</y></coordinate>
+                <coordinate><x>1</x><y>1</y></coordinate>
             </from>
             <to>
-                <coordinate><x>0</x><y>0</y></coordinate>
+                <coordinate><x>2</x><y>1</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>2</x><y>1</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>1</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
@@ -156,28 +165,28 @@
         </move>
         <move>
             <from>
-                <coordinate><x>0</x><y>0</y></coordinate>
-            </from>
-            <to>
                 <coordinate><x>0</x><y>1</y></coordinate>
-            </to>
-            <type>0</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>0</x><y>0</y></coordinate>
             </from>
             <to>
-                <coordinate><x>1</x><y>0</y></coordinate>
+                <coordinate><x>1</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
         <move>
             <from>
-                <coordinate><x>1</x><y>0</y></coordinate>
+                <coordinate><x>5</x><y>1</y></coordinate>
             </from>
             <to>
-                <coordinate><x>2</x><y>0</y></coordinate>
+                <coordinate><x>4</x><y>1</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>4</x><y>1</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>5</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
@@ -192,64 +201,19 @@
         </move>
         <move>
             <from>
-                <coordinate><x>5</x><y>0</y></coordinate>
-            </from>
-            <to>
-                <coordinate><x>6</x><y>0</y></coordinate>
-            </to>
-            <type>1</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>6</x><y>0</y></coordinate>
-            </from>
-            <to>
                 <coordinate><x>6</x><y>1</y></coordinate>
-            </to>
-            <type>0</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>6</x><y>0</y></coordinate>
             </from>
             <to>
-                <coordinate><x>5</x><y>0</y></coordinate>
+                <coordinate><x>5</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
         <move>
             <from>
-                <coordinate><x>5</x><y>0</y></coordinate>
-            </from>
-            <to>
-                <coordinate><x>4</x><y>0</y></coordinate>
-            </to>
-            <type>1</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>3</x><y>0</y></coordinate>
-            </from>
-            <to>
-                <coordinate><x>4</x><y>0</y></coordinate>
-            </to>
-            <type>1</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>4</x><y>0</y></coordinate>
-            </from>
-            <to>
                 <coordinate><x>4</x><y>1</y></coordinate>
-            </to>
-            <type>1</type>
-        </move>
-        <move>
-            <from>
-                <coordinate><x>3</x><y>1</y></coordinate>
             </from>
             <to>
-                <coordinate><x>2</x><y>1</y></coordinate>
+                <coordinate><x>3</x><y>1</y></coordinate>
             </to>
             <type>1</type>
         </move>
@@ -260,7 +224,43 @@
             <to>
                 <coordinate><x>3</x><y>1</y></coordinate>
             </to>
-            <type>0</type>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>4</x><y>0</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>5</x><y>0</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>5</x><y>0</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>4</x><y>0</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>2</x><y>0</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>1</x><y>0</y></coordinate>
+            </to>
+            <type>1</type>
+        </move>
+        <move>
+            <from>
+                <coordinate><x>1</x><y>0</y></coordinate>
+            </from>
+            <to>
+                <coordinate><x>2</x><y>0</y></coordinate>
+            </to>
+            <type>1</type>
         </move>
     </solution_moves>
 </colorfold_level>
